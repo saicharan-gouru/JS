@@ -3,9 +3,9 @@ const obj = { id: 5, name: "charan", address: { pincode: 508204, town: "Huzurnag
 
 
 function DeepClone(item) {
-    if (item === undefined || typeof item !== obj) return item
+    if (item === undefined || typeof item !== "object") return item
 
-    res = Array.isArray(item) ? [] : {}
+    const res = Array.isArray(item) ? [] : {}
 
     for (const key in item) {
         if (item.hasOwnProperty(key)) {
@@ -16,5 +16,10 @@ function DeepClone(item) {
     return res;
 }
 
+
+
 console.log(DeepClone(arr))
-console.log(DeepClone(obj))
+const obj2 = DeepClone(obj)
+obj.address.pincode = 555555
+console.log(obj);
+console.log(obj2);
