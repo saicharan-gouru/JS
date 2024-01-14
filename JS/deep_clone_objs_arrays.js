@@ -16,8 +16,6 @@ function DeepClone(item) {
     return res;
 }
 
-
-
 console.log(DeepClone(arr))
 const obj2 = DeepClone(obj)
 obj.address.pincode = 555555
