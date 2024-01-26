@@ -3,7 +3,7 @@ const name = "Saicharan";
 function countOfLetters(name) {
     name = name.toLowerCase();
 
-    const letterCount = {}
+    const letterCount = {};
 
     for (let i = 0; i < name.length; i++) {
         let char = name[i];
@@ -16,16 +16,16 @@ function countOfLetters(name) {
 
     //To print letter as capital if count is greater than 2
 
-    const letterCountConditional = {}
+    const letterCountConditional = {};
 
     for (let letter in letterCount) {
         if (letterCount[letter] > 2)
-            letterCountConditional[letter.toUpperCase()] = letterCount[letter]
+            letterCountConditional[letter.toUpperCase()] = letterCount[letter];
         else
-            letterCountConditional[letter] = letterCount[letter]
+            letterCountConditional[letter] = letterCount[letter];
     }
 
-    return letterCountConditional
+    return letterCountConditional;
 }
 
-console.log(countOfLetters(name))
+console.log(countOfLetters(name));
